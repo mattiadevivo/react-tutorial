@@ -1,15 +1,29 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Counter extends Component {
-    state = {
-        count: 0,
-    };
 
-    render(){
+    /*constructor(props) {
+        super(props);
+        // Since handleIncrement is not called in obje.method way it does not have access to 'this' property
+        // or we can assign handleIncrement = () => {...}
+        //this.handleIncrement = this.handleIncrement.bind(this);
+    }*/
+
+    /* renderTags() {
+        if (this.state.tags.length === 0) return <p>There is no tags</p> // null to display nothing
+        return <ul>
+            {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
+        </ul>
+    } */
+
+    render() {
         return (
             <div>
-                <span className={this.getBadgeClasses()}>{this.state.count}</span>
-                <button className="btn btn-secondary btn-sm">Increment</button>
+                <h4>Counter #{this.props.counter.id}</h4>
+                <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                <button className="btn btn-secondary btn-sm" onClick={() => this.props.onIncrement(this.props.counter)}>Increment</button>
+                <button className="btn btn-danger btn-sm" onClick={() => this.props.onDelete(this.props.counter.id)}>Delete</button>
+                {/*this.state.tags.length === 0 && 'Please insert a new tag!' JS truthy & falsy */}
             </div>
         );
     }
@@ -17,14 +31,19 @@ class Counter extends Component {
     /// Returns css classes to be assigned to badge depending on count value
     getBadgeClasses() {
         let classes = 'badge m-2 badge-';
-        classes += (this.state.count === 0) ? 'warning' : 'primary';
+        classes += (this.props.counter.value === 0) ? 'warning' : 'primary';
         return classes;
     }
 
     formatCount() {
-        const {count} = this.count;
-        count === 0 ? 'Zero' : count;
+        // This is called object destructuring, it allows us to extract data from arrays, objects, maps and sets
+        const { value } = this.props.counter;
+        return value === 0 ? 'Zero' : value;
     }
+
+    /* handleIncrement(product) {
+        this.setState({value: this.state.value + 1});
+    } */
 }
 
 export default Counter;
