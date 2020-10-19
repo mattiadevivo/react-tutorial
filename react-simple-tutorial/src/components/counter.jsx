@@ -16,6 +16,20 @@ class Counter extends Component {
         </ul>
     } */
 
+    /// Called after the component has been updated
+    componentDidUpdate(prevProps, prevState) {
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
+        if(prevProps.counter.value !== this.state.counter.value) {
+            // Performa AJAX call
+        }
+    }
+
+    /// Called just before the component is removed from the DOM
+    componentWillUnmount() {
+        console.log();
+    }
+
     render() {
         return (
             <div>
