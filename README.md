@@ -1,9 +1,8 @@
 ## Prerequisites
 - Good JavaScript and web knowledges
 - Functional programming
-- Small experience in writing web app is a plus
+- Small experience in writing web app is a plus.<br>
 To type \` character with italian keyboard type `ALT+96`.
-#REDUX 
 ## Installation
 Redux toolkit is reccomended to write redux logic
 `npm install @reduxjs/toolkit`.
