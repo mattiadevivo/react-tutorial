@@ -1,20 +1,20 @@
-# Prerequisites
+## Prerequisites
 - Good JavaScript and web knowledges
 - Functional programming
 - Small experience in writing web app is a plus
-To type \` character with italian keyboard type `ALT+96`.\\
+To type \` character with italian keyboard type `ALT+96`.
 #REDUX 
 ## Installation
 Redux toolkit is reccomended to write redux logic
-`npm install @reduxjs/toolkit`.\\
+`npm install @reduxjs/toolkit`.
 Create React app with redux template
 `npx create-react-app my-app --template redux`.
 ``
 ## Introduction
-**Redux** is a js library used to mantain the state of complex web applications. It is such a container of components for our front-end.\\
-When do we need to use Redux?\\
-Redux is needed when we face with a complex application where multiple components affect each others on some user actions or  state changes.\\
-What kind of front-end UI library/framework can we use together with Redux?\\
+**Redux** is a js library used to mantain the state of complex web applications. It is such a container of components for our front-end.
+When do we need to use Redux?
+Redux is needed when we face with a complex application where multiple components affect each others on some user actions or  state changes.
+What kind of front-end UI library/framework can we use together with Redux?
 Whatever you want, the most popoular is React + Redux but you can use it together with Angular, Vue.js...
 - Centralizes application's state
 - Makes data flow transparent and predictable
@@ -62,4 +62,5 @@ The application flow is the following: when an action is raised then it dispatch
 - Define actions that users can perform on the store
 - Create reducer
 - Set up the store
-# REACT + REDUX
+## React + Redux
+See react-complete directory.
