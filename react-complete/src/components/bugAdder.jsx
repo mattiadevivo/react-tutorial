@@ -25,10 +25,10 @@ class BugAdder extends Component {
 
     render() {
         return (
-            <div class="input-group mb-3 sm">
-                <input type="text" class="form-control" placeholder="Bug Description" aria-label="Bug Description" aria-describedby="button-addon2" value={this.state.value} onChange={this.handleChange} />
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onClick={this.handleClick}>Add</button>
+            <div className="input-group mb-3 sm">
+                <input type="text" className="form-control" placeholder="Bug Description" aria-label="Bug Description" aria-describedby="button-addon2" value={this.state.value} onChange={this.handleChange} />
+                <div className="input-group-append">
+                    <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={this.handleClick}>Add</button>
                 </div>
             </div>);
     }
